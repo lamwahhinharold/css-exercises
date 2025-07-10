@@ -1,6 +1,10 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .logo {
@@ -9,11 +13,18 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  margin: auto;
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /*the <li> child elements become flex items with <ul> being the flex container (nested)
+                  , and by default the flex-direction is horizontal so they look like inline elements
+                  , but they're still block-level and behave as flex items.*/ 
+  gap: 10px;
 }
 
 a {
